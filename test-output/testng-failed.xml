@@ -5,10 +5,11 @@
     <classes>
       <class name="UITest.CustomerPageTests">
         <methods>
+          <include name="PaginationFirstPageTest"/>
           <include name="setup"/>
-          <include name="PaginationPreviousPageTest"/>
-          <include name="PaginationNextPageTest"/>
           <include name="end"/>
+          <include name="PaginationLastPageTest"/>
+          <include name="VerifySingelEditFormTest"/>
         </methods>
       </class> <!-- UITest.CustomerPageTests -->
     </classes>
