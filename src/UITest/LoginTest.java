@@ -32,10 +32,13 @@ public class LoginTest {
     	Thread.sleep(3000);
     	String currentURL = driver.getCurrentUrl();
     	Thread.sleep(1000);
-    	driver.close();
-    	System.out.println(currentURL);
     	
     	Assert.assertTrue(currentURL.equals("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/home"));
+	}
+	
+	@AfterTest
+	public void end() {
+    	driver.close();
 	}
 	
 }

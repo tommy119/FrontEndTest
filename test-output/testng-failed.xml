@@ -3,12 +3,14 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="UITest.LoginTest">
+      <class name="UITest.CustomerPageTests">
         <methods>
           <include name="setup"/>
-          <include name="loginTest"/>
+          <include name="PaginationPreviousPageTest"/>
+          <include name="PaginationNextPageTest"/>
+          <include name="end"/>
         </methods>
-      </class> <!-- UITest.LoginTest -->
+      </class> <!-- UITest.CustomerPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

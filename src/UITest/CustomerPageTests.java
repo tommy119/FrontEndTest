@@ -27,10 +27,59 @@ public class CustomerPageTests {
     	Thread.sleep(3000);
 	}
 	
-	@Test
-	public void loginTest() throws InterruptedException {
+	@Test(priority=0)
+	public void ViewTest() throws InterruptedException {
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
     	Assert.assertFalse(pagLabel.equals("0 of 0"));
+    	Thread.sleep(3000);
+	}
+	
+	@Test(priority=1)
+	public void PaginationNextPageTest() throws InterruptedException {
+		driver.findElementByCssSelector("button.mat-paginator-navigation-next").click();
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(3000);
+		
+		Assert.assertTrue(pagLabel.indexOf("21 – 40") != -1);
+	}
+	
+	@Test(priority=2)
+	public void PaginationPreviousPageTest() throws InterruptedException {
+		driver.findElementByCssSelector("button.mat-paginator-navigation-previous").click();
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(3000);
+		
+		Assert.assertTrue(pagLabel.indexOf("1 – 20") != -1);
+	}
+	
+	
+	@Test(priority=3)
+	public void PaginationLastPageTest() throws InterruptedException {
+		driver.findElementByCssSelector("button.mat-paginator-navigation-last").click();
+		
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		int dashIndex = pagLabel.indexOf("–") + 2;
+		pagLabel = pagLabel.substring(dashIndex);
+		String array[] = pagLabel.split("\\s+");
+		Thread.sleep(3000);
+		
+		Assert.assertTrue(array[0].equals(array[2]));
+	}
+	
+	
+	@Test(priority=4)
+	public void PaginationFirstPageTest() throws InterruptedException {
+		driver.findElementByCssSelector("button.mat-paginator-navigation-first").click();
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(3000);
+		
+		Assert.assertTrue(pagLabel.indexOf("1 – 20") != -1);
+	}
+	
+	
+	@AfterTest
+	public void end() {
+    	driver.close();
 	}
 
 }

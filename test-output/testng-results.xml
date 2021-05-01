@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-01T05:39:59Z" name="Default suite" finished-at="2021-05-01T05:40:09Z" duration-ms="10403">
+  <suite started-at="2021-05-01T06:08:13Z" name="Default suite" finished-at="2021-05-01T06:08:38Z" duration-ms="25611">
     <groups>
     </groups>
-    <test started-at="2021-05-01T05:39:59Z" name="Default test" finished-at="2021-05-01T05:40:09Z" duration-ms="10403">
+    <test started-at="2021-05-01T06:08:13Z" name="Default test" finished-at="2021-05-01T06:08:38Z" duration-ms="25611">
       <class name="UITest.CustomerPageTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerPageTests@52719fb6]" started-at="2021-04-30T22:39:59Z" name="setup" finished-at="2021-04-30T22:40:09Z" duration-ms="10363" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerPageTests@537f60bf]" started-at="2021-04-30T23:08:13Z" name="setup" finished-at="2021-04-30T23:08:23Z" duration-ms="10220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest()[pri:0, instance:UITest.CustomerPageTests@52719fb6]" started-at="2021-04-30T22:40:09Z" name="loginTest" finished-at="2021-04-30T22:40:09Z" duration-ms="30" status="PASS">
+        <test-method signature="ViewTest()[pri:0, instance:UITest.CustomerPageTests@537f60bf]" started-at="2021-04-30T23:08:23Z" name="ViewTest" finished-at="2021-04-30T23:08:26Z" duration-ms="3030" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
+        </test-method> <!-- ViewTest -->
+        <test-method signature="PaginationNextPageTest()[pri:0, instance:UITest.CustomerPageTests@537f60bf]" started-at="2021-04-30T23:08:26Z" name="PaginationNextPageTest" finished-at="2021-04-30T23:08:29Z" duration-ms="3103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaginationNextPageTest -->
+        <test-method signature="PaginationPreviousPageTest()[pri:0, instance:UITest.CustomerPageTests@537f60bf]" started-at="2021-04-30T23:08:29Z" name="PaginationPreviousPageTest" finished-at="2021-04-30T23:08:32Z" duration-ms="3090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaginationPreviousPageTest -->
+        <test-method signature="PaginationLastPageTest()[pri:0, instance:UITest.CustomerPageTests@537f60bf]" started-at="2021-04-30T23:08:32Z" name="PaginationLastPageTest" finished-at="2021-04-30T23:08:35Z" duration-ms="3081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaginationLastPageTest -->
+        <test-method signature="PaginationFirstPageTest()[pri:0, instance:UITest.CustomerPageTests@537f60bf]" started-at="2021-04-30T23:08:35Z" name="PaginationFirstPageTest" finished-at="2021-04-30T23:08:38Z" duration-ms="3078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaginationFirstPageTest -->
+        <test-method is-config="true" signature="end()[pri:0, instance:UITest.CustomerPageTests@537f60bf]" started-at="2021-04-30T23:08:38Z" name="end" finished-at="2021-04-30T23:08:38Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
       </class> <!-- UITest.CustomerPageTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
