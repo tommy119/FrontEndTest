@@ -5,6 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import com.paulhammant.ngwebdriver.ByAngular;
+import com.paulhammant.ngwebdriver.ByAngularButtonText;
+
 
 public class LoginTest {
 	
@@ -13,18 +16,26 @@ public class LoginTest {
 	@BeforeTest
 	public void setup() {
     	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-    	ChromeDriver driver = new ChromeDriver();
+    	this.driver = new ChromeDriver();
     	driver.get("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/login");
 	}
 	
 	@Test
 	public void loginTest() throws InterruptedException {
+
+    	driver.findElement(By.id("mat-input-0")).sendKeys("brothersdemo@gmail.com");
     	Thread.sleep(1000);
-    	driver.findElement(By.id("user")).sendKeys("brothersdemo@gmail.com");
+    	driver.findElement(By.id("mat-input-1")).sendKeys("asdfasdf");
     	Thread.sleep(1000);
-    	driver.findElement(By.id("pass")).sendKeys("asdfasdf");
+    	ByAngularButtonText login = ByAngular.buttonText("LOG IN");
+    	driver.findElement(login).click();
     	Thread.sleep(3000);
-    	driver.findElement(By.id("login")).click();
+    	String currentURL = driver.getCurrentUrl();
+    	Thread.sleep(1000);
+    	driver.close();
+    	System.out.println(currentURL);
+    	
+    	Assert.assertTrue(currentURL.equals("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/home"));
 	}
 	
 }
