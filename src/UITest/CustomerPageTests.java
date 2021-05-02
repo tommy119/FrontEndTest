@@ -1,5 +1,8 @@
 package UITest;
+import java.util.List;
+
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -24,6 +27,7 @@ public class CustomerPageTests {
     	driver.findElement(login).click();
     	Thread.sleep(2000);
     	driver.get("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/customers");
+    	driver.manage().window().maximize();
     	Thread.sleep(2000);
 	}
 	
@@ -179,15 +183,36 @@ public class CustomerPageTests {
 		Assert.assertFalse(tableCode2.equals("000002"));
 	}
 	
-	/*
-	@Test(priority=1)
+	@Test(priority=6)
+	public void VerifySortAscendTest() throws InterruptedException {
+
+		driver.findElements(By.className("cdk-column-Address")).get(0).click();
+		Thread.sleep(2000);
+		List<WebElement> addressList = driver.findElements(By.className("cdk-column-Address"));
+		for (int i = 1; i < addressList.size()-1; i++) {
+			Assert.assertTrue(addressList.get(i).getText().compareTo(addressList.get(i+1).getText()) <= 0);
+		}
+	}
+	
+	@Test(priority=7)
+	public void VerifySortDescendTest() throws InterruptedException {
+		driver.findElements(By.className("cdk-column-Address")).get(0).click();
+		Thread.sleep(2000);
+		List<WebElement> addressList = driver.findElements(By.className("cdk-column-Address"));
+		for (int i = 1; i < addressList.size()-1; i++) {
+			Assert.assertTrue(addressList.get(i).getText().compareTo(addressList.get(i+1).getText()) >= 0);
+		}
+	}
+	
+	
+	@Test(priority=8)
 	public void ViewTest() throws InterruptedException {
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
     	Assert.assertFalse(pagLabel.equals("0 of 0"));
     	Thread.sleep(3000);
 	}
 	
-	@Test(priority=2)
+	@Test(priority=9)
 	public void PaginationNextPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-next").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
@@ -196,7 +221,7 @@ public class CustomerPageTests {
 		Assert.assertTrue(pagLabel.indexOf("21 – 40") != -1);
 	}
 	
-	@Test(priority=3)
+	@Test(priority=10)
 	public void PaginationPreviousPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-previous").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
@@ -206,7 +231,7 @@ public class CustomerPageTests {
 	}
 	
 	
-	@Test(priority=4)
+	@Test(priority=11)
 	public void PaginationLastPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-last").click();
 		
@@ -220,18 +245,18 @@ public class CustomerPageTests {
 	}
 	
 	
-	@Test(priority=5)
+	@Test(priority=12)
 	public void PaginationFirstPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-first").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(3000);
 		
 		Assert.assertTrue(pagLabel.indexOf("1 – 20") != -1);
-	}	*/
+	}
 	
 	@AfterTest
 	public void end() {
-    	//driver.close();
+    	driver.close();
 	}
 
 }

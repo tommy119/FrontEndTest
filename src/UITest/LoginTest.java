@@ -14,10 +14,12 @@ public class LoginTest {
 	ChromeDriver driver;
 	
 	@BeforeTest
-	public void setup() {
+	public void setup() throws InterruptedException  {
     	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
     	this.driver = new ChromeDriver();
     	driver.get("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/login");
+    	driver.manage().window().maximize();
+    	Thread.sleep(2000);
 	}
 	
 	@Test
