@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -21,9 +20,11 @@ public class CustomerPageTests {
 	public void setup() throws InterruptedException {
     	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
     	this.driver = new ChromeDriver();
+    	
     	driver.get("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/login");
     	driver.manage().window().maximize();
     	Thread.sleep(1000);
+    	
     	driver.findElement(By.id("mat-input-0")).sendKeys("brothersdemo@gmail.com");
     	Thread.sleep(1000);
     	driver.findElement(By.id("mat-input-1")).sendKeys("asdfasdf");
@@ -31,6 +32,7 @@ public class CustomerPageTests {
     	ByAngularButtonText login = ByAngular.buttonText("LOG IN");
     	driver.findElement(login).click();
     	Thread.sleep(2000);
+    	
     	driver.get("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/customers");
     	Thread.sleep(2000);
 	}
@@ -89,10 +91,12 @@ public class CustomerPageTests {
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-input-6")).sendKeys("edited");
 		Thread.sleep(2000);
+		
     	driver.findElement(ByAngular.buttonText("Save Changes")).click();
     	Thread.sleep(2000);
     	driver.findElement(ByAngular.buttonText("Confirm")).click();
     	Thread.sleep(2000);
+    	
 		String tableNote = driver.findElements(By.className("cdk-column-Note")).get(1).getText();
 		Thread.sleep(2000);
 
@@ -106,6 +110,7 @@ public class CustomerPageTests {
     	Thread.sleep(2000);
     	driver.findElement(ByAngular.buttonText("Confirm")).click();
     	Thread.sleep(2000);
+    	
 		String tableCode = driver.findElements(By.className("cdk-column-Code")).get(1).getText();
 		Thread.sleep(2000);
 
@@ -164,6 +169,7 @@ public class CustomerPageTests {
     	Thread.sleep(2000);
     	driver.findElement(ByAngular.buttonText("Confirm")).click();
     	Thread.sleep(2000);
+    	
 		String tableNote1 = driver.findElements(By.className("cdk-column-Note")).get(1).getText();
 		String tableNote2 = driver.findElements(By.className("cdk-column-Note")).get(2).getText();
 		Thread.sleep(2000);
@@ -179,6 +185,7 @@ public class CustomerPageTests {
     	Thread.sleep(2000);
     	driver.findElement(ByAngular.buttonText("Confirm")).click();
     	Thread.sleep(2000);
+    	
 		String tableCode1 = driver.findElements(By.className("cdk-column-Code")).get(1).getText();
 		String tableCode2 = driver.findElements(By.className("cdk-column-Code")).get(2).getText();
 		Thread.sleep(2000);
@@ -192,6 +199,7 @@ public class CustomerPageTests {
 
 		driver.findElements(By.className("cdk-column-Address")).get(0).click();
 		Thread.sleep(2000);
+		
 		List<WebElement> addressList = driver.findElements(By.className("cdk-column-Address"));
 		for (int i = 1; i < addressList.size()-1; i++) {
 			Assert.assertTrue(addressList.get(i).getText().compareTo(addressList.get(i+1).getText()) <= 0);
@@ -202,25 +210,26 @@ public class CustomerPageTests {
 	public void VerifySortDescendTest() throws InterruptedException {
 		driver.findElements(By.className("cdk-column-Address")).get(0).click();
 		Thread.sleep(2000);
+		
 		List<WebElement> addressList = driver.findElements(By.className("cdk-column-Address"));
 		for (int i = 1; i < addressList.size()-1; i++) {
 			Assert.assertTrue(addressList.get(i).getText().compareTo(addressList.get(i+1).getText()) >= 0);
 		}
 	}
 	
-	
 	@Test(priority=8)
 	public void ViewTest() throws InterruptedException {
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(2000);
+		
     	Assert.assertFalse(pagLabel.equals("0 of 0"));
-    	Thread.sleep(3000);
 	}
 	
 	@Test(priority=9)
 	public void PaginationNextPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-next").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		Assert.assertTrue(pagLabel.indexOf("21 – 40") != -1);
 	}
@@ -229,7 +238,7 @@ public class CustomerPageTests {
 	public void PaginationPreviousPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-previous").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		Assert.assertTrue(pagLabel.indexOf("1 – 20") != -1);
 	}
@@ -243,7 +252,7 @@ public class CustomerPageTests {
 		int dashIndex = pagLabel.indexOf("–") + 2;
 		pagLabel = pagLabel.substring(dashIndex);
 		String array[] = pagLabel.split("\\s+");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		Assert.assertTrue(array[0].equals(array[2]));
 	}
@@ -253,7 +262,7 @@ public class CustomerPageTests {
 	public void PaginationFirstPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-first").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		Assert.assertTrue(pagLabel.indexOf("1 – 20") != -1);
 	}
@@ -268,10 +277,12 @@ public class CustomerPageTests {
 		Thread.sleep(1000);
 		driver.findElementByCssSelector("body.mat-typography").click();
 		Thread.sleep(1000);
+		
 		WebElement searchBar = driver.findElementByCssSelector("input.ng-pristine");
 		searchBar.sendKeys("wood");
 		searchBar.sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
+		
 		List<WebElement> names = driver.findElements(By.className("cdk-colum-Name"));
 		for (int i = 1; i < names.size(); i++) {
 			Assert.assertTrue(names.get(i).getText().toLowerCase().contains("wood"));
