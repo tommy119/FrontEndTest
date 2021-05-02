@@ -6,12 +6,9 @@
       <class name="UITest.CustomerPageTests">
         <methods>
           <include name="VerifyMultiDeleteTest"/>
-          <include name="VerifySingelEditTest"/>
-          <include name="VerifySingelDeleteTest"/>
           <include name="setup"/>
           <include name="VerifyMultiEditTest"/>
           <include name="end"/>
-          <include name="VerifySingelEditFormTest"/>
         </methods>
       </class> <!-- UITest.CustomerPageTests -->
     </classes>

@@ -126,15 +126,15 @@ public class CustomerPageTests {
     	driver.findElement(ByAngular.buttonText("Confirm")).click();
     	Thread.sleep(2000);
     	
-		driver.findElement(By.id("mat-input-0")).sendKeys("000002");
+		driver.findElement(By.id("mat-input-9")).sendKeys("000002");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-1")).sendKeys("Anubis");
+		driver.findElement(By.id("mat-input-10")).sendKeys("Anubis");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-2")).sendKeys("Duat");
+		driver.findElement(By.id("mat-input-11")).sendKeys("Duat");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-3")).sendKeys("Fourth Kingdom");
+		driver.findElement(By.id("mat-input-12")).sendKeys("Fourth Kingdom");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-8")).sendKeys("1");
+		driver.findElement(By.id("mat-input-17")).sendKeys("1");
 		Thread.sleep(1000);
 		
     	driver.findElement(ByAngular.buttonText("Add Customer")).click();
@@ -142,17 +142,16 @@ public class CustomerPageTests {
     	driver.findElement(ByAngular.buttonText("Confirm")).click();
     	Thread.sleep(2000);
     	
-		driver.findElement(By.id("mat-checkbox-12")).click();
+		driver.findElement(By.id("mat-checkbox-92")).click();
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-checkbox-13")).click();
+		driver.findElement(By.id("mat-checkbox-93")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-button-toggle-1-button")).click();
 		Thread.sleep(1000);
     	
-		driver.findElement(By.id("mat-input-6")).clear();
+
+		driver.findElement(By.id("mat-input-21")).sendKeys("multiedited");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-6")).sendKeys("multiedited");
-		Thread.sleep(2000);
     	driver.findElement(ByAngular.buttonText("Save Changes")).click();
     	Thread.sleep(2000);
     	driver.findElement(ByAngular.buttonText("Confirm")).click();
