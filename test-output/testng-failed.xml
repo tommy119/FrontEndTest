@@ -7,7 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="end"/>
-          <include name="VerifySortDescendTest"/>
+          <include name="SearchTest"/>
         </methods>
       </class> <!-- UITest.CustomerPageTests -->
     </classes>
