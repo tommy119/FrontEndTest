@@ -31,24 +31,121 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi">0</td><td class="numi">34.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">25.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="5">UITest.CustomerPageTests</td><td><a href="#m1"><b>VerifySingelEditFormTest</b>  </a></td><td class="numi">1</td><td>1619928638650</td><td class="numi">20</td></tr><tr class="failedodd"><td><a href="#m2"><b>VerifySingelEditTest</b>  </a></td><td class="numi">1</td><td>1619928638672</td><td class="numi">3117</td></tr><tr class="failedodd"><td><a href="#m3"><b>VerifySingelDeleteTest</b>  </a></td><td class="numi">1</td><td>1619928641790</td><td class="numi">9</td></tr><tr class="failedodd"><td><a href="#m4"><b>VerifyMultiEditTest</b>  </a></td><td class="numi">1</td><td>1619928641800</td><td class="numi">2074</td></tr><tr class="failedodd"><td><a href="#m5"><b>VerifyMultiDeleteTest</b>  </a></td><td class="numi">1</td><td>1619928643875</td><td class="numi">7</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="6">UITest.CustomerPageTests</td><td><a href="#m1"><b>VerifySingelEditFormTest</b>  </a></td><td class="numi">1</td><td>1619851294490</td><td class="numi">9219</td></tr><tr class="passedodd"><td><a href="#m2"><b>ViewTest</b>  </a></td><td class="numi">1</td><td>1619851303710</td><td class="numi">3028</td></tr><tr class="passedodd"><td><a href="#m3"><b>PaginationNextPageTest</b>  </a></td><td class="numi">1</td><td>1619851306740</td><td class="numi">3096</td></tr><tr class="passedodd"><td><a href="#m4"><b>PaginationPreviousPageTest</b>  </a></td><td class="numi">1</td><td>1619851309836</td><td class="numi">3084</td></tr><tr class="passedodd"><td><a href="#m5"><b>PaginationLastPageTest</b>  </a></td><td class="numi">1</td><td>1619851312921</td><td class="numi">3077</td></tr><tr class="passedodd"><td><a href="#m6"><b>PaginationFirstPageTest</b>  </a></td><td class="numi">1</td><td>1619851315998</td><td class="numi">3079</td></tr>
+<tr class="passedodd"><td rowspan="1">UITest.CustomerPageTests</td><td><a href="#m6"><b>VerifyAddTest</b>  </a></td><td class="numi">1</td><td>1619928626911</td><td class="numi">11738</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">UITest.CustomerPageTests:PaginationLastPageTest</h2>
+<h2 id="m1">UITest.CustomerPageTests:VerifySingelEditFormTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#mat\-checkbox\-32&quot;}
+  (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AIDAN-LAPTOP&apos;, ip: &apos;172.30.112.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\aboss\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d92032645df0feadce9c9c91b4df2ca
+*** Element info: {Using=id, value=mat-checkbox-32}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:188)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at UITest.CustomerPageTests.VerifySingelEditFormTest(CustomerPageTests.java:66)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">UITest.CustomerPageTests:VerifySingelEditFormTest</h2>
+<h2 id="m2">UITest.CustomerPageTests:VerifyMultiEditTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#mat\-input\-9&quot;}
+  (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AIDAN-LAPTOP&apos;, ip: &apos;172.30.112.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\aboss\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d92032645df0feadce9c9c91b4df2ca
+*** Element info: {Using=id, value=mat-input-9}</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:188)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at UITest.CustomerPageTests.VerifyMultiEditTest(CustomerPageTests.java:113)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">UITest.CustomerPageTests:PaginationPreviousPageTest</h2>
+<h2 id="m3">UITest.CustomerPageTests:VerifySingelEditTest</h2>
+<div style="padding-left:3em">
+<p>searchText(Save Changes) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AIDAN-LAPTOP&apos;, ip: &apos;172.30.112.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+com.paulhammant.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+<br/>at com.paulhammant.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+<br/>at com.paulhammant.ngwebdriver.ByAngularButtonText.findElement(ByAngularButtonText.java:17)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at UITest.CustomerPageTests.VerifySingelEditTest(CustomerPageTests.java:84)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">UITest.CustomerPageTests:PaginationFirstPageTest</h2>
+<h2 id="m4">UITest.CustomerPageTests:VerifyMultiDeleteTest</h2>
+<div style="padding-left:3em">
+<p>searchText(Delete Customer(s)) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AIDAN-LAPTOP&apos;, ip: &apos;172.30.112.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+com.paulhammant.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+<br/>at com.paulhammant.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+<br/>at com.paulhammant.ngwebdriver.ByAngularButtonText.findElement(ByAngularButtonText.java:17)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at UITest.CustomerPageTests.VerifyMultiDeleteTest(CustomerPageTests.java:171)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">UITest.CustomerPageTests:ViewTest</h2>
+<h2 id="m5">UITest.CustomerPageTests:VerifySingelDeleteTest</h2>
+<div style="padding-left:3em">
+<p>searchText(Delete Customer(s)) didn&apos;t have any matching elements at this place in the DOM
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;AIDAN-LAPTOP&apos;, ip: &apos;172.30.112.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+com.paulhammant.ngwebdriver.ByAngular$BaseBy.errorIfNull(ByAngular.java:155)
+<br/>at com.paulhammant.ngwebdriver.ByAngular$BaseBy.findElement(ByAngular.java:166)
+<br/>at com.paulhammant.ngwebdriver.ByAngularButtonText.findElement(ByAngularButtonText.java:17)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at UITest.CustomerPageTests.VerifySingelDeleteTest(CustomerPageTests.java:97)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">UITest.CustomerPageTests:PaginationNextPageTest</h2>
+<h2 id="m6">UITest.CustomerPageTests:VerifyAddTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
