@@ -224,5 +224,4 @@ public class CustomerSortTests {
 	public void end() {
     	driver.close();
 	}
-	
 }

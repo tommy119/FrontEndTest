@@ -1,10 +1,6 @@
 package UITest;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -12,7 +8,7 @@ import org.testng.annotations.*;
 import com.paulhammant.ngwebdriver.ByAngular;
 import com.paulhammant.ngwebdriver.ByAngularButtonText;
 
-public class CustomerPageTests {
+public class CustomerPageViewTests {
 	
 	ChromeDriver driver;
 	
@@ -36,12 +32,8 @@ public class CustomerPageTests {
     	driver.get("http://dsd-office-web.s3-website-us-west-2.amazonaws.com/customers");
     	Thread.sleep(2000);
 	}
-	
-	
-	
 
-	
-	@Test(priority=8)
+	@Test(priority=0)
 	public void ViewTest() throws InterruptedException {
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
@@ -49,7 +41,7 @@ public class CustomerPageTests {
     	Assert.assertFalse(pagLabel.equals("0 of 0"));
 	}
 	
-	@Test(priority=9)
+	@Test(priority=1)
 	public void PaginationNextPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-next").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
@@ -58,7 +50,7 @@ public class CustomerPageTests {
 		Assert.assertTrue(pagLabel.indexOf("21 – 40") != -1);
 	}
 	
-	@Test(priority=10)
+	@Test(priority=2)
 	public void PaginationPreviousPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-previous").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
@@ -68,7 +60,7 @@ public class CustomerPageTests {
 	}
 	
 	
-	@Test(priority=11)
+	@Test(priority=3)
 	public void PaginationLastPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-last").click();
 		
@@ -82,7 +74,7 @@ public class CustomerPageTests {
 	}
 	
 	
-	@Test(priority=12)
+	@Test(priority=4)
 	public void PaginationFirstPageTest() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-first").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
@@ -90,29 +82,7 @@ public class CustomerPageTests {
 		
 		Assert.assertTrue(pagLabel.indexOf("1 – 20") != -1);
 	}
-	
-	@Test(priority=13)
-	public void SearchTest() throws InterruptedException {
-		driver.findElement(ByAngular.buttonText("Search Settings")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.id("mat-checkbox-1")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.id("mat-checkbox-3")).click();
-		Thread.sleep(1000);
-		driver.findElementByCssSelector("body.mat-typography").click();
-		Thread.sleep(1000);
-		
-		WebElement searchBar = driver.findElementByCssSelector("input.ng-pristine");
-		searchBar.sendKeys("wood");
-		searchBar.sendKeys(Keys.ENTER);
-		Thread.sleep(2000);
-		
-		List<WebElement> names = driver.findElements(By.className("cdk-colum-Name"));
-		for (int i = 1; i < names.size(); i++) {
-			Assert.assertTrue(names.get(i).getText().toLowerCase().contains("wood"));
-		}
-	}
-	
+
 	@AfterTest
 	public void end() {
     	driver.close();
