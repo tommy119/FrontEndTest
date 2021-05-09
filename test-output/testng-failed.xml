@@ -3,20 +3,15 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="UITest.CustomerSearchTests">
+      <class name="UITest.CustomerPageViewTests">
         <methods>
-          <include name="SearchByOnlyCity"/>
-          <include name="SearchByOnlyAddress"/>
-          <include name="SearchByOnlyName"/>
-          <include name="SearchByOnlyCode"/>
-          <include name="SearchByOnlyPhone"/>
-          <include name="SearchByOnlyZip"/>
           <include name="setup"/>
-          <include name="SearchByOnlyNote"/>
-          <include name="SearchByOnlyState"/>
           <include name="end"/>
+          <include name="PaginationItemsPerPage25"/>
+          <include name="PaginationItemsPerPage100"/>
+          <include name="PaginationItemsPerPage50"/>
         </methods>
-      </class> <!-- UITest.CustomerSearchTests -->
+      </class> <!-- UITest.CustomerPageViewTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

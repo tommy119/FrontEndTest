@@ -1,61 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="10" passed="10" failed="0" skipped="0">
+<testng-results total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-09T05:08:55Z" name="Default suite" finished-at="2021-05-09T05:10:10Z" duration-ms="75715">
+  <suite started-at="2021-05-09T05:19:58Z" name="Default suite" finished-at="2021-05-09T05:20:30Z" duration-ms="32531">
     <groups>
     </groups>
-    <test started-at="2021-05-09T05:08:55Z" name="Default test" finished-at="2021-05-09T05:10:10Z" duration-ms="75715">
-      <class name="UITest.CustomerSearchTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:08:55Z" name="setup" finished-at="2021-05-08T22:09:04Z" duration-ms="9668" status="PASS">
+    <test started-at="2021-05-09T05:19:58Z" name="Default test" finished-at="2021-05-09T05:20:30Z" duration-ms="32531">
+      <class name="UITest.CustomerPageViewTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:19:58Z" name="setup" finished-at="2021-05-08T22:20:08Z" duration-ms="9557" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="SearchByOnlyCode()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:04Z" name="SearchByOnlyCode" finished-at="2021-05-08T22:09:12Z" duration-ms="7404" status="PASS">
+        <test-method signature="CustomerTableView()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:08Z" name="CustomerTableView" finished-at="2021-05-08T22:20:10Z" duration-ms="2033" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyCode -->
-        <test-method signature="SearchByOnlyName()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:12Z" name="SearchByOnlyName" finished-at="2021-05-08T22:09:18Z" duration-ms="6298" status="PASS">
+        </test-method> <!-- CustomerTableView -->
+        <test-method signature="PaginationNextPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:10Z" name="PaginationNextPage" finished-at="2021-05-08T22:20:12Z" duration-ms="2117" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyName -->
-        <test-method signature="SearchByOnlyAddress()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:18Z" name="SearchByOnlyAddress" finished-at="2021-05-08T22:09:24Z" duration-ms="6302" status="PASS">
+        </test-method> <!-- PaginationNextPage -->
+        <test-method signature="PaginationPreviousPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:12Z" name="PaginationPreviousPage" finished-at="2021-05-08T22:20:14Z" duration-ms="2101" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyAddress -->
-        <test-method signature="SearchByOnlyCity()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:24Z" name="SearchByOnlyCity" finished-at="2021-05-08T22:09:31Z" duration-ms="6279" status="PASS">
+        </test-method> <!-- PaginationPreviousPage -->
+        <test-method signature="PaginationLastPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:14Z" name="PaginationLastPage" finished-at="2021-05-08T22:20:16Z" duration-ms="2088" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyCity -->
-        <test-method signature="SearchByOnlyState()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:31Z" name="SearchByOnlyState" finished-at="2021-05-08T22:09:37Z" duration-ms="6258" status="PASS">
+        </test-method> <!-- PaginationLastPage -->
+        <test-method signature="PaginationFirstPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:16Z" name="PaginationFirstPage" finished-at="2021-05-08T22:20:18Z" duration-ms="2072" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyState -->
-        <test-method signature="SearchByOnlyZip()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:37Z" name="SearchByOnlyZip" finished-at="2021-05-08T22:09:43Z" duration-ms="6269" status="PASS">
+        </test-method> <!-- PaginationFirstPage -->
+        <test-method signature="PaginationItemsPerPage10()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:18Z" name="PaginationItemsPerPage10" finished-at="2021-05-08T22:20:21Z" duration-ms="3137" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyZip -->
-        <test-method signature="SearchByOnlyNote()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:43Z" name="SearchByOnlyNote" finished-at="2021-05-08T22:09:49Z" duration-ms="6300" status="PASS">
+        </test-method> <!-- PaginationItemsPerPage10 -->
+        <test-method signature="PaginationItemsPerPage25()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:21Z" name="PaginationItemsPerPage25" finished-at="2021-05-08T22:20:24Z" duration-ms="3112" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyNote -->
-        <test-method signature="SearchByOnlyPhone()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:49Z" name="SearchByOnlyPhone" finished-at="2021-05-08T22:09:58Z" duration-ms="8261" status="PASS">
+        </test-method> <!-- PaginationItemsPerPage25 -->
+        <test-method signature="PaginationItemsPerPage50()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:24Z" name="PaginationItemsPerPage50" finished-at="2021-05-08T22:20:27Z" duration-ms="3136" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByOnlyPhone -->
-        <test-method signature="SearchByMultipleNameAndAddress()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:09:58Z" name="SearchByMultipleNameAndAddress" finished-at="2021-05-08T22:10:05Z" duration-ms="7312" status="PASS">
+        </test-method> <!-- PaginationItemsPerPage50 -->
+        <test-method signature="PaginationItemsPerPage100()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:27Z" name="PaginationItemsPerPage100" finished-at="2021-05-08T22:20:30Z" duration-ms="3116" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchByMultipleNameAndAddress -->
-        <test-method signature="SearchByAllFields()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:10:05Z" name="SearchByAllFields" finished-at="2021-05-08T22:10:10Z" duration-ms="5297" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchByAllFields -->
-        <test-method is-config="true" signature="end()[pri:0, instance:UITest.CustomerSearchTests@1e0b4072]" started-at="2021-05-08T22:10:10Z" name="end" finished-at="2021-05-08T22:10:10Z" duration-ms="54" status="PASS">
+        </test-method> <!-- PaginationItemsPerPage100 -->
+        <test-method is-config="true" signature="end()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-08T22:20:30Z" name="end" finished-at="2021-05-08T22:20:30Z" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- UITest.CustomerSearchTests -->
+      </class> <!-- UITest.CustomerPageViewTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

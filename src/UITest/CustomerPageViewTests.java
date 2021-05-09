@@ -82,6 +82,50 @@ public class CustomerPageViewTests {
 		
 		Assert.assertTrue(pagLabel.indexOf("1 – 20") != -1);
 	}
+	
+	@Test(priority=5)
+	public void PaginationItemsPerPage10() throws InterruptedException {
+		driver.findElement(By.id("mat-select-0")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("mat-option-0")).click();
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(2000);
+		
+		Assert.assertTrue(pagLabel.indexOf("1 – 10") != -1);
+	}
+	
+	@Test(priority=5)
+	public void PaginationItemsPerPage25() throws InterruptedException {
+		driver.findElement(By.id("mat-select-0")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("mat-option-2")).click();
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(2000);
+		
+		Assert.assertTrue(pagLabel.indexOf("1 – 25") != -1);
+	}
+	
+	@Test(priority=6)
+	public void PaginationItemsPerPage50() throws InterruptedException {
+		driver.findElement(By.id("mat-select-0")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("mat-option-3")).click();
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(2000);
+		
+		Assert.assertTrue(pagLabel.indexOf("1 – 50") != -1);
+	}
+	
+	@Test(priority=7)
+	public void PaginationItemsPerPage100() throws InterruptedException {
+		driver.findElement(By.id("mat-select-0")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("mat-option-4")).click();
+		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
+		Thread.sleep(2000);
+		
+		Assert.assertTrue(pagLabel.indexOf("1 – 100") != -1);
+	}
 
 	@AfterTest
 	public void end() {
