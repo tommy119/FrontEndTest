@@ -3,13 +3,20 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="UITest.CustomerCRUDTests">
+      <class name="UITest.CustomerSearchTests">
         <methods>
-          <include name="end"/>
+          <include name="SearchByOnlyCity"/>
+          <include name="SearchByOnlyAddress"/>
+          <include name="SearchByOnlyName"/>
+          <include name="SearchByOnlyCode"/>
+          <include name="SearchByOnlyPhone"/>
+          <include name="SearchByOnlyZip"/>
           <include name="setup"/>
-          <include name="CustomerMultiDelete"/>
+          <include name="SearchByOnlyNote"/>
+          <include name="SearchByOnlyState"/>
+          <include name="end"/>
         </methods>
-      </class> <!-- UITest.CustomerCRUDTests -->
+      </class> <!-- UITest.CustomerSearchTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

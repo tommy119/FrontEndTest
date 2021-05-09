@@ -34,7 +34,7 @@ public class CustomerPageViewTests {
 	}
 
 	@Test(priority=0)
-	public void ViewTest() throws InterruptedException {
+	public void CustomerTableView() throws InterruptedException {
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
 		
@@ -42,7 +42,7 @@ public class CustomerPageViewTests {
 	}
 	
 	@Test(priority=1)
-	public void PaginationNextPageTest() throws InterruptedException {
+	public void PaginationNextPage() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-next").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
@@ -51,7 +51,7 @@ public class CustomerPageViewTests {
 	}
 	
 	@Test(priority=2)
-	public void PaginationPreviousPageTest() throws InterruptedException {
+	public void PaginationPreviousPage() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-previous").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
@@ -61,7 +61,7 @@ public class CustomerPageViewTests {
 	
 	
 	@Test(priority=3)
-	public void PaginationLastPageTest() throws InterruptedException {
+	public void PaginationLastPage() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-last").click();
 		
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
@@ -75,7 +75,7 @@ public class CustomerPageViewTests {
 	
 	
 	@Test(priority=4)
-	public void PaginationFirstPageTest() throws InterruptedException {
+	public void PaginationFirstPage() throws InterruptedException {
 		driver.findElementByCssSelector("button.mat-paginator-navigation-first").click();
 		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
