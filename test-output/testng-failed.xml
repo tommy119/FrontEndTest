@@ -3,13 +3,14 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="UITest.CustomerPageTests">
+      <class name="UITest.CustomerSortTests">
         <methods>
+          <include name="SortPhoneDescend"/>
           <include name="setup"/>
           <include name="end"/>
-          <include name="SearchTest"/>
+          <include name="SortStateDescend"/>
         </methods>
-      </class> <!-- UITest.CustomerPageTests -->
+      </class> <!-- UITest.CustomerSortTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

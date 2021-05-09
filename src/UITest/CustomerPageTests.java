@@ -25,9 +25,9 @@ public class CustomerPageTests {
     	driver.manage().window().maximize();
     	Thread.sleep(1000);
     	
-    	driver.findElement(By.id("mat-input-0")).sendKeys("brothersdemo@gmail.com");
+    	driver.findElement(By.id("user")).sendKeys("brothersdemo@gmail.com");
     	Thread.sleep(1000);
-    	driver.findElement(By.id("mat-input-1")).sendKeys("asdfasdf");
+    	driver.findElement(By.id("pass")).sendKeys("asdfasdf");
     	Thread.sleep(1000);
     	ByAngularButtonText login = ByAngular.buttonText("LOG IN");
     	driver.findElement(login).click();
@@ -194,28 +194,7 @@ public class CustomerPageTests {
 		Assert.assertFalse(tableCode2.equals("000002"));
 	}
 	
-	@Test(priority=6)
-	public void VerifySortAscendTest() throws InterruptedException {
 
-		driver.findElements(By.className("cdk-column-Address")).get(0).click();
-		Thread.sleep(2000);
-		
-		List<WebElement> addressList = driver.findElements(By.className("cdk-column-Address"));
-		for (int i = 1; i < addressList.size()-1; i++) {
-			Assert.assertTrue(addressList.get(i).getText().compareTo(addressList.get(i+1).getText()) <= 0);
-		}
-	}
-	
-	@Test(priority=7)
-	public void VerifySortDescendTest() throws InterruptedException {
-		driver.findElements(By.className("cdk-column-Address")).get(0).click();
-		Thread.sleep(2000);
-		
-		List<WebElement> addressList = driver.findElements(By.className("cdk-column-Address"));
-		for (int i = 1; i < addressList.size()-1; i++) {
-			Assert.assertTrue(addressList.get(i).getText().compareTo(addressList.get(i+1).getText()) >= 0);
-		}
-	}
 	
 	@Test(priority=8)
 	public void ViewTest() throws InterruptedException {

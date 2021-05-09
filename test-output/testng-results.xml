@@ -1,77 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="14" passed="14" failed="0" skipped="0">
+<testng-results total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-02T06:30:15Z" name="Default suite" finished-at="2021-05-02T06:31:53Z" duration-ms="98445">
+  <suite started-at="2021-05-09T03:48:16Z" name="Default suite" finished-at="2021-05-09T03:49:04Z" duration-ms="48265">
     <groups>
     </groups>
-    <test started-at="2021-05-02T06:30:15Z" name="Default test" finished-at="2021-05-02T06:31:53Z" duration-ms="98445">
-      <class name="UITest.CustomerPageTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:30:15Z" name="setup" finished-at="2021-05-01T23:30:24Z" duration-ms="9308" status="PASS">
+    <test started-at="2021-05-09T03:48:16Z" name="Default test" finished-at="2021-05-09T03:49:04Z" duration-ms="48265">
+      <class name="UITest.CustomerSortTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:16Z" name="setup" finished-at="2021-05-08T20:48:26Z" duration-ms="9714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyAddTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:30:24Z" name="VerifyAddTest" finished-at="2021-05-01T23:30:36Z" duration-ms="11743" status="PASS">
+        <test-method signature="SortCodeAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:26Z" name="SortCodeAscend" finished-at="2021-05-08T20:48:28Z" duration-ms="2461" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyAddTest -->
-        <test-method signature="VerifySingelEditFormTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:30:36Z" name="VerifySingelEditFormTest" finished-at="2021-05-01T23:30:39Z" duration-ms="3154" status="PASS">
+        </test-method> <!-- SortCodeAscend -->
+        <test-method signature="SortCodeDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:28Z" name="SortCodeDescend" finished-at="2021-05-08T20:48:31Z" duration-ms="2401" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySingelEditFormTest -->
-        <test-method signature="VerifySingelEditTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:30:39Z" name="VerifySingelEditTest" finished-at="2021-05-01T23:30:48Z" duration-ms="9238" status="PASS">
+        </test-method> <!-- SortCodeDescend -->
+        <test-method signature="SortNameAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:31Z" name="SortNameAscend" finished-at="2021-05-08T20:48:33Z" duration-ms="2425" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySingelEditTest -->
-        <test-method signature="VerifySingelDeleteTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:30:48Z" name="VerifySingelDeleteTest" finished-at="2021-05-01T23:30:54Z" duration-ms="6117" status="PASS">
+        </test-method> <!-- SortNameAscend -->
+        <test-method signature="SortNameDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:33Z" name="SortNameDescend" finished-at="2021-05-08T20:48:35Z" duration-ms="2375" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySingelDeleteTest -->
-        <test-method signature="VerifyMultiEditTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:30:54Z" name="VerifyMultiEditTest" finished-at="2021-05-01T23:31:25Z" duration-ms="31258" status="PASS">
+        </test-method> <!-- SortNameDescend -->
+        <test-method signature="SortAddressAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:35Z" name="SortAddressAscend" finished-at="2021-05-08T20:48:38Z" duration-ms="2415" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyMultiEditTest -->
-        <test-method signature="VerifyMultiDeleteTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:25Z" name="VerifyMultiDeleteTest" finished-at="2021-05-01T23:31:32Z" duration-ms="6133" status="PASS">
+        </test-method> <!-- SortAddressAscend -->
+        <test-method signature="SortAddressDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:38Z" name="SortAddressDescend" finished-at="2021-05-08T20:48:40Z" duration-ms="2378" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyMultiDeleteTest -->
-        <test-method signature="VerifySortAscendTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:32Z" name="VerifySortAscendTest" finished-at="2021-05-01T23:31:34Z" duration-ms="2383" status="PASS">
+        </test-method> <!-- SortAddressDescend -->
+        <test-method signature="SortCityAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:40Z" name="SortCityAscend" finished-at="2021-05-08T20:48:43Z" duration-ms="2414" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySortAscendTest -->
-        <test-method signature="VerifySortDescendTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:34Z" name="VerifySortDescendTest" finished-at="2021-05-01T23:31:36Z" duration-ms="2363" status="PASS">
+        </test-method> <!-- SortCityAscend -->
+        <test-method signature="SortCityDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:43Z" name="SortCityDescend" finished-at="2021-05-08T20:48:45Z" duration-ms="2399" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySortDescendTest -->
-        <test-method signature="ViewTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:36Z" name="ViewTest" finished-at="2021-05-01T23:31:38Z" duration-ms="2023" status="PASS">
+        </test-method> <!-- SortCityDescend -->
+        <test-method signature="SortStateAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:45Z" name="SortStateAscend" finished-at="2021-05-08T20:48:47Z" duration-ms="2394" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ViewTest -->
-        <test-method signature="PaginationNextPageTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:38Z" name="PaginationNextPageTest" finished-at="2021-05-01T23:31:40Z" duration-ms="2090" status="PASS">
+        </test-method> <!-- SortStateAscend -->
+        <test-method signature="SortStateDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:47Z" name="SortStateDescend" finished-at="2021-05-08T20:48:50Z" duration-ms="2411" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationNextPageTest -->
-        <test-method signature="PaginationPreviousPageTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:40Z" name="PaginationPreviousPageTest" finished-at="2021-05-01T23:31:42Z" duration-ms="2088" status="PASS">
+        </test-method> <!-- SortStateDescend -->
+        <test-method signature="SortZipAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:50Z" name="SortZipAscend" finished-at="2021-05-08T20:48:52Z" duration-ms="2408" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationPreviousPageTest -->
-        <test-method signature="PaginationLastPageTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:42Z" name="PaginationLastPageTest" finished-at="2021-05-01T23:31:45Z" duration-ms="2074" status="PASS">
+        </test-method> <!-- SortZipAscend -->
+        <test-method signature="SortZipDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:52Z" name="SortZipDescend" finished-at="2021-05-08T20:48:55Z" duration-ms="2395" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationLastPageTest -->
-        <test-method signature="PaginationFirstPageTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:45Z" name="PaginationFirstPageTest" finished-at="2021-05-01T23:31:47Z" duration-ms="2078" status="PASS">
+        </test-method> <!-- SortZipDescend -->
+        <test-method signature="SortNoteAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:55Z" name="SortNoteAscend" finished-at="2021-05-08T20:48:57Z" duration-ms="2386" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationFirstPageTest -->
-        <test-method signature="SearchTest()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:47Z" name="SearchTest" finished-at="2021-05-01T23:31:53Z" duration-ms="6310" status="PASS">
+        </test-method> <!-- SortNoteAscend -->
+        <test-method signature="SortNoteDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:57Z" name="SortNoteDescend" finished-at="2021-05-08T20:48:59Z" duration-ms="2393" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchTest -->
-        <test-method is-config="true" signature="end()[pri:0, instance:UITest.CustomerPageTests@f09733f]" started-at="2021-05-01T23:31:53Z" name="end" finished-at="2021-05-01T23:31:53Z" duration-ms="69" status="PASS">
+        </test-method> <!-- SortNoteDescend -->
+        <test-method signature="SortPhoneAscend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:48:59Z" name="SortPhoneAscend" finished-at="2021-05-08T20:49:02Z" duration-ms="2426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SortPhoneAscend -->
+        <test-method signature="SortPhoneDescend()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:49:02Z" name="SortPhoneDescend" finished-at="2021-05-08T20:49:04Z" duration-ms="2389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SortPhoneDescend -->
+        <test-method is-config="true" signature="end()[pri:0, instance:UITest.CustomerSortTests@41a0aa7d]" started-at="2021-05-08T20:49:04Z" name="end" finished-at="2021-05-08T20:49:04Z" duration-ms="60" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- UITest.CustomerPageTests -->
+      </class> <!-- UITest.CustomerSortTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
