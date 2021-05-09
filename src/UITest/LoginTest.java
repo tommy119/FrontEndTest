@@ -25,9 +25,9 @@ public class LoginTest {
 	@Test
 	public void loginTest() throws InterruptedException {
 
-    	driver.findElement(By.id("mat-input-0")).sendKeys("brothersdemo@gmail.com");
+    	driver.findElement(By.id("user")).sendKeys("brothersdemo@gmail.com");
     	Thread.sleep(1000);
-    	driver.findElement(By.id("mat-input-1")).sendKeys("asdfasdf");
+    	driver.findElement(By.id("pass")).sendKeys("asdfasdf");
     	Thread.sleep(1000);
     	ByAngularButtonText login = ByAngular.buttonText("LOG IN");
     	driver.findElement(login).click();
