@@ -46,8 +46,6 @@ public class CustomerCRUDTests {
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-input-3")).sendKeys("Giza");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-8")).sendKeys("1");
-		Thread.sleep(1000);
 		
     	driver.findElement(ByAngular.buttonText("Add Customer")).click();
     	Thread.sleep(2000);
@@ -60,13 +58,13 @@ public class CustomerCRUDTests {
 		String tableName = driver.findElements(By.className("cdk-column-Name")).get(1).getText();
 		String tableAddress = driver.findElements(By.className("cdk-column-Address")).get(1).getText();
 		String tableCity = driver.findElements(By.className("cdk-column-City")).get(1).getText();
-		String tableStatus = driver.findElements(By.className("cdk-column-Active-Status")).get(1).getText();
+		String tableStatus = driver.findElements(By.className("cdk-column-Status")).get(1).getText();
 
 		Assert.assertTrue(tableCode.equals("000001"));
 		Assert.assertTrue(tableName.equals("AmenRa"));
 		Assert.assertTrue(tableAddress.equals("Egypt"));
 		Assert.assertTrue(tableCity.equals("Giza"));
-		Assert.assertTrue(tableStatus.equals("1"));
+		Assert.assertTrue(tableStatus.equals("Active"));
 	}	
 	
 	@Test(priority=1)
@@ -125,15 +123,13 @@ public class CustomerCRUDTests {
 		driver.findElement(By.id("mat-button-toggle-2-button")).click();
 		Thread.sleep(2000);
 		
-		driver.findElement(By.id("mat-input-18")).sendKeys("000001");
+		driver.findElement(By.id("mat-input-16")).sendKeys("000001");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-19")).sendKeys("AmenRa");
+		driver.findElement(By.id("mat-input-17")).sendKeys("AmenRa");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-20")).sendKeys("Egypt");
+		driver.findElement(By.id("mat-input-18")).sendKeys("Egypt");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-21")).sendKeys("Giza");
-		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-26")).sendKeys("1");
+		driver.findElement(By.id("mat-input-19")).sendKeys("Giza");
 		Thread.sleep(1000);
 		
     	driver.findElement(ByAngular.buttonText("Add Customer")).click();
@@ -144,15 +140,13 @@ public class CustomerCRUDTests {
     	Thread.sleep(2000);
     	
     	
-		driver.findElement(By.id("mat-input-18")).sendKeys("000002");
+		driver.findElement(By.id("mat-input-16")).sendKeys("000002");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-19")).sendKeys("Anubis");
+		driver.findElement(By.id("mat-input-17")).sendKeys("Anubis");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-20")).sendKeys("Duat");
+		driver.findElement(By.id("mat-input-18")).sendKeys("Duat");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-21")).sendKeys("Fourth Kingdom");
-		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-26")).sendKeys("1");
+		driver.findElement(By.id("mat-input-19")).sendKeys("Fourth Kingdom");
 		Thread.sleep(1000);
 		
     	driver.findElement(ByAngular.buttonText("Add Customer")).click();
@@ -170,7 +164,7 @@ public class CustomerCRUDTests {
 		Thread.sleep(1000);
     	
 
-		driver.findElement(By.id("mat-input-30")).sendKeys("multiedited");
+		driver.findElement(By.id("mat-input-27")).sendKeys("multiedited");
 		Thread.sleep(1000);
     	driver.findElement(ByAngular.buttonText("Save Changes")).click();
     	Thread.sleep(2000);
@@ -209,6 +203,6 @@ public class CustomerCRUDTests {
 	
 	@AfterTest
 	public void end() {
-    	driver.close();
+    	//driver.close();
 	}
 }
