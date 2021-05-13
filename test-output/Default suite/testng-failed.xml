@@ -3,18 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="UITest.CustomerCRUDTests">
+      <class name="UITest.CustomerSortTests">
         <methods>
-          <include name="end"/>
-          <include name="CustomerMultiEdit"/>
           <include name="setup"/>
-          <include name="CustomerSingleDelete"/>
-          <include name="CustomerSingelEditFormView"/>
-          <include name="CustomerAddNewCustomer"/>
-          <include name="CustomerSingleEdit"/>
-          <include name="CustomerMultiDelete"/>
+          <include name="end"/>
+          <include name="SortStateDescend"/>
         </methods>
-      </class> <!-- UITest.CustomerCRUDTests -->
+      </class> <!-- UITest.CustomerSortTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

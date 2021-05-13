@@ -203,6 +203,6 @@ public class CustomerCRUDTests {
 	
 	@AfterTest
 	public void end() {
-    	//driver.close();
+    	driver.close();
 	}
 }
