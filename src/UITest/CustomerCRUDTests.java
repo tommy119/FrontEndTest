@@ -46,8 +46,6 @@ public class CustomerCRUDTests {
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-input-3")).sendKeys("Giza");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-8")).sendKeys("1");
-		Thread.sleep(1000);
 		
     	driver.findElement(ByAngular.buttonText("Add Customer")).click();
     	Thread.sleep(2000);
@@ -60,31 +58,21 @@ public class CustomerCRUDTests {
 		String tableName = driver.findElements(By.className("cdk-column-Name")).get(1).getText();
 		String tableAddress = driver.findElements(By.className("cdk-column-Address")).get(1).getText();
 		String tableCity = driver.findElements(By.className("cdk-column-City")).get(1).getText();
-		String tableStatus = driver.findElements(By.className("cdk-column-Active-Status")).get(1).getText();
+		String tableStatus = driver.findElements(By.className("cdk-column-Status")).get(1).getText();
 
 		Assert.assertTrue(tableCode.equals("000001"));
 		Assert.assertTrue(tableName.equals("AmenRa"));
 		Assert.assertTrue(tableAddress.equals("Egypt"));
 		Assert.assertTrue(tableCity.equals("Giza"));
-		Assert.assertTrue(tableStatus.equals("1"));
+		Assert.assertTrue(tableStatus.equals("Active"));
 	}	
 	
 	@Test(priority=1)
-	public void CustomerSingelEditFormView() throws InterruptedException {
+	public void CustomerSingleEdit() throws InterruptedException {
 		driver.findElement(By.id("mat-checkbox-31")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-button-toggle-1-button")).click();
 		Thread.sleep(1000);
-		
-		String editFormCode = driver.findElement(By.id("mat-input-0")).getAttribute("value");
-		String tableCode = driver.findElements(By.className("cdk-column-Code")).get(1).getText();
-		Thread.sleep(1000);
-
-		Assert.assertTrue(editFormCode.equals(tableCode));
-	}	
-	
-	@Test(priority=2)
-	public void CustomerSingleEdit() throws InterruptedException {
 		driver.findElement(By.id("mat-input-6")).clear();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-input-6")).sendKeys("edited");
@@ -101,7 +89,7 @@ public class CustomerCRUDTests {
 		Assert.assertTrue(tableNote.equals("edited"));
 	}
 	
-	@Test(priority=3)
+	@Test(priority=2)
 	public void CustomerSingleDelete() throws InterruptedException {
 		driver.findElement(By.id("mat-checkbox-51")).click();
 		Thread.sleep(1000);
@@ -119,21 +107,19 @@ public class CustomerCRUDTests {
 		Assert.assertFalse(tableCode.equals("000001"));
 	}
 	
-	@Test(priority=4)
+	@Test(priority=3)
 	public void CustomerMultiEdit() throws InterruptedException {
 		
 		driver.findElement(By.id("mat-button-toggle-2-button")).click();
 		Thread.sleep(2000);
 		
-		driver.findElement(By.id("mat-input-18")).sendKeys("000001");
+		driver.findElement(By.id("mat-input-16")).sendKeys("000001");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-19")).sendKeys("AmenRa");
+		driver.findElement(By.id("mat-input-17")).sendKeys("AmenRa");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-20")).sendKeys("Egypt");
+		driver.findElement(By.id("mat-input-18")).sendKeys("Egypt");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-21")).sendKeys("Giza");
-		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-26")).sendKeys("1");
+		driver.findElement(By.id("mat-input-19")).sendKeys("Giza");
 		Thread.sleep(1000);
 		
     	driver.findElement(ByAngular.buttonText("Add Customer")).click();
@@ -144,15 +130,13 @@ public class CustomerCRUDTests {
     	Thread.sleep(2000);
     	
     	
-		driver.findElement(By.id("mat-input-18")).sendKeys("000002");
+		driver.findElement(By.id("mat-input-16")).sendKeys("000002");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-19")).sendKeys("Anubis");
+		driver.findElement(By.id("mat-input-17")).sendKeys("Anubis");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-20")).sendKeys("Duat");
+		driver.findElement(By.id("mat-input-18")).sendKeys("Duat");
 		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-21")).sendKeys("Fourth Kingdom");
-		Thread.sleep(1000);
-		driver.findElement(By.id("mat-input-26")).sendKeys("1");
+		driver.findElement(By.id("mat-input-19")).sendKeys("Fourth Kingdom");
 		Thread.sleep(1000);
 		
     	driver.findElement(ByAngular.buttonText("Add Customer")).click();
@@ -170,7 +154,7 @@ public class CustomerCRUDTests {
 		Thread.sleep(1000);
     	
 
-		driver.findElement(By.id("mat-input-30")).sendKeys("multiedited");
+		driver.findElement(By.id("mat-input-27")).sendKeys("multiedited");
 		Thread.sleep(1000);
     	driver.findElement(ByAngular.buttonText("Save Changes")).click();
     	Thread.sleep(2000);
@@ -185,7 +169,7 @@ public class CustomerCRUDTests {
 		Assert.assertTrue(tableNote2.equals("multiedited"));
 	}
 	
-	@Test(priority=5)
+	@Test(priority=4)
 	public void CustomerMultiDelete() throws InterruptedException {
 		driver.findElement(By.id("mat-checkbox-131")).click();
 		Thread.sleep(1000);

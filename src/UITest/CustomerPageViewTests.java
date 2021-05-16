@@ -1,6 +1,9 @@
 package UITest;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -88,10 +91,11 @@ public class CustomerPageViewTests {
 		driver.findElement(By.id("mat-select-0")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-option-0")).click();
-		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
 		
-		Assert.assertTrue(pagLabel.indexOf("1 – 10") != -1);
+		List<WebElement> itemList = driver.findElements(By.className("cdk-column-Code"));
+		
+		Assert.assertTrue(itemList.size() == 11);
 	}
 	
 	@Test(priority=5)
@@ -99,10 +103,11 @@ public class CustomerPageViewTests {
 		driver.findElement(By.id("mat-select-0")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-option-2")).click();
-		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
 		
-		Assert.assertTrue(pagLabel.indexOf("1 – 25") != -1);
+		List<WebElement> itemList = driver.findElements(By.className("cdk-column-Code"));
+		
+		Assert.assertTrue(itemList.size() == 26);
 	}
 	
 	@Test(priority=6)
@@ -110,10 +115,11 @@ public class CustomerPageViewTests {
 		driver.findElement(By.id("mat-select-0")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-option-3")).click();
-		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
 		
-		Assert.assertTrue(pagLabel.indexOf("1 – 50") != -1);
+		List<WebElement> itemList = driver.findElements(By.className("cdk-column-Code"));
+		
+		Assert.assertTrue(itemList.size() == 51);
 	}
 	
 	@Test(priority=7)
@@ -121,10 +127,11 @@ public class CustomerPageViewTests {
 		driver.findElement(By.id("mat-select-0")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-option-4")).click();
-		String pagLabel = driver.findElement(By.className("mat-paginator-range-label")).getText();
 		Thread.sleep(2000);
 		
-		Assert.assertTrue(pagLabel.indexOf("1 – 100") != -1);
+		List<WebElement> itemList = driver.findElements(By.className("cdk-column-Code"));
+		
+		Assert.assertTrue(itemList.size() == 101);
 	}
 
 	@AfterTest

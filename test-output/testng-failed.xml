@@ -9,6 +9,7 @@
           <include name="end"/>
           <include name="PaginationItemsPerPage25"/>
           <include name="PaginationItemsPerPage100"/>
+          <include name="PaginationItemsPerPage10"/>
           <include name="PaginationItemsPerPage50"/>
         </methods>
       </class> <!-- UITest.CustomerPageViewTests -->
