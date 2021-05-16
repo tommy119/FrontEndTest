@@ -3,13 +3,16 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="UITest.CustomerSortTests">
+      <class name="UITest.CustomerPageViewTests">
         <methods>
           <include name="setup"/>
           <include name="end"/>
-          <include name="SortStateDescend"/>
+          <include name="PaginationItemsPerPage25"/>
+          <include name="PaginationItemsPerPage100"/>
+          <include name="PaginationItemsPerPage10"/>
+          <include name="PaginationItemsPerPage50"/>
         </methods>
-      </class> <!-- UITest.CustomerSortTests -->
+      </class> <!-- UITest.CustomerPageViewTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
