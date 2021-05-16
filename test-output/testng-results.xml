@@ -1,57 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="9" passed="9" failed="0" skipped="0">
+<testng-results total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-16T03:22:26Z" name="Default suite" finished-at="2021-05-16T03:22:59Z" duration-ms="32365">
+  <suite started-at="2021-05-16T03:35:44Z" name="Default suite" finished-at="2021-05-16T03:37:09Z" duration-ms="84569">
     <groups>
     </groups>
-    <test started-at="2021-05-16T03:22:26Z" name="Default test" finished-at="2021-05-16T03:22:59Z" duration-ms="32365">
-      <class name="UITest.CustomerPageViewTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:26Z" name="setup" finished-at="2021-05-15T20:22:36Z" duration-ms="9468" status="PASS">
+    <test started-at="2021-05-16T03:35:44Z" name="Default test" finished-at="2021-05-16T03:37:09Z" duration-ms="84569">
+      <class name="UITest.CustomerCRUDTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:UITest.CustomerCRUDTests@537f60bf]" started-at="2021-05-15T20:35:44Z" name="setup" finished-at="2021-05-15T20:35:54Z" duration-ms="9605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="CustomerTableView()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:36Z" name="CustomerTableView" finished-at="2021-05-15T20:22:38Z" duration-ms="2032" status="PASS">
+        <test-method signature="CustomerAddNewCustomer()[pri:0, instance:UITest.CustomerCRUDTests@537f60bf]" started-at="2021-05-15T20:35:54Z" name="CustomerAddNewCustomer" finished-at="2021-05-15T20:36:07Z" duration-ms="12740" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CustomerTableView -->
-        <test-method signature="PaginationNextPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:38Z" name="PaginationNextPage" finished-at="2021-05-15T20:22:40Z" duration-ms="2113" status="PASS">
+        </test-method> <!-- CustomerAddNewCustomer -->
+        <test-method signature="CustomerSingleEdit()[pri:0, instance:UITest.CustomerCRUDTests@537f60bf]" started-at="2021-05-15T20:36:07Z" name="CustomerSingleEdit" finished-at="2021-05-15T20:36:18Z" duration-ms="11386" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationNextPage -->
-        <test-method signature="PaginationPreviousPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:40Z" name="PaginationPreviousPage" finished-at="2021-05-15T20:22:42Z" duration-ms="2086" status="PASS">
+        </test-method> <!-- CustomerSingleEdit -->
+        <test-method signature="CustomerSingleDelete()[pri:0, instance:UITest.CustomerCRUDTests@537f60bf]" started-at="2021-05-15T20:36:18Z" name="CustomerSingleDelete" finished-at="2021-05-15T20:36:26Z" duration-ms="8240" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationPreviousPage -->
-        <test-method signature="PaginationLastPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:42Z" name="PaginationLastPage" finished-at="2021-05-15T20:22:44Z" duration-ms="2080" status="PASS">
+        </test-method> <!-- CustomerSingleDelete -->
+        <test-method signature="CustomerMultiEdit()[pri:0, instance:UITest.CustomerCRUDTests@537f60bf]" started-at="2021-05-15T20:36:26Z" name="CustomerMultiEdit" finished-at="2021-05-15T20:36:59Z" duration-ms="33240" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationLastPage -->
-        <test-method signature="PaginationFirstPage()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:44Z" name="PaginationFirstPage" finished-at="2021-05-15T20:22:46Z" duration-ms="2084" status="PASS">
+        </test-method> <!-- CustomerMultiEdit -->
+        <test-method signature="CustomerMultiDelete()[pri:0, instance:UITest.CustomerCRUDTests@537f60bf]" started-at="2021-05-15T20:36:59Z" name="CustomerMultiDelete" finished-at="2021-05-15T20:37:09Z" duration-ms="9298" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PaginationFirstPage -->
-        <test-method signature="PaginationItemsPerPage10()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:46Z" name="PaginationItemsPerPage10" finished-at="2021-05-15T20:22:49Z" duration-ms="3128" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PaginationItemsPerPage10 -->
-        <test-method signature="PaginationItemsPerPage25()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:49Z" name="PaginationItemsPerPage25" finished-at="2021-05-15T20:22:52Z" duration-ms="3100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PaginationItemsPerPage25 -->
-        <test-method signature="PaginationItemsPerPage50()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:52Z" name="PaginationItemsPerPage50" finished-at="2021-05-15T20:22:56Z" duration-ms="3107" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PaginationItemsPerPage50 -->
-        <test-method signature="PaginationItemsPerPage100()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:56Z" name="PaginationItemsPerPage100" finished-at="2021-05-15T20:22:59Z" duration-ms="3104" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PaginationItemsPerPage100 -->
-        <test-method is-config="true" signature="end()[pri:0, instance:UITest.CustomerPageViewTests@4686afc2]" started-at="2021-05-15T20:22:59Z" name="end" finished-at="2021-05-15T20:22:59Z" duration-ms="49" status="PASS">
+        </test-method> <!-- CustomerMultiDelete -->
+        <test-method is-config="true" signature="end()[pri:0, instance:UITest.CustomerCRUDTests@537f60bf]" started-at="2021-05-15T20:37:09Z" name="end" finished-at="2021-05-15T20:37:09Z" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- UITest.CustomerPageViewTests -->
+      </class> <!-- UITest.CustomerCRUDTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

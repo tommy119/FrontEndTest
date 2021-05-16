@@ -68,21 +68,11 @@ public class CustomerCRUDTests {
 	}	
 	
 	@Test(priority=1)
-	public void CustomerSingelEditFormView() throws InterruptedException {
+	public void CustomerSingleEdit() throws InterruptedException {
 		driver.findElement(By.id("mat-checkbox-31")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-button-toggle-1-button")).click();
 		Thread.sleep(1000);
-		
-		String editFormCode = driver.findElement(By.id("mat-input-0")).getAttribute("value");
-		String tableCode = driver.findElements(By.className("cdk-column-Code")).get(1).getText();
-		Thread.sleep(1000);
-
-		Assert.assertTrue(editFormCode.equals(tableCode));
-	}	
-	
-	@Test(priority=2)
-	public void CustomerSingleEdit() throws InterruptedException {
 		driver.findElement(By.id("mat-input-6")).clear();
 		Thread.sleep(1000);
 		driver.findElement(By.id("mat-input-6")).sendKeys("edited");
@@ -99,7 +89,7 @@ public class CustomerCRUDTests {
 		Assert.assertTrue(tableNote.equals("edited"));
 	}
 	
-	@Test(priority=3)
+	@Test(priority=2)
 	public void CustomerSingleDelete() throws InterruptedException {
 		driver.findElement(By.id("mat-checkbox-51")).click();
 		Thread.sleep(1000);
@@ -117,7 +107,7 @@ public class CustomerCRUDTests {
 		Assert.assertFalse(tableCode.equals("000001"));
 	}
 	
-	@Test(priority=4)
+	@Test(priority=3)
 	public void CustomerMultiEdit() throws InterruptedException {
 		
 		driver.findElement(By.id("mat-button-toggle-2-button")).click();
@@ -179,7 +169,7 @@ public class CustomerCRUDTests {
 		Assert.assertTrue(tableNote2.equals("multiedited"));
 	}
 	
-	@Test(priority=5)
+	@Test(priority=4)
 	public void CustomerMultiDelete() throws InterruptedException {
 		driver.findElement(By.id("mat-checkbox-131")).click();
 		Thread.sleep(1000);
